@@ -1,0 +1,63 @@
+ATM Project
+│
+├── Account Class
+│   │
+│   ├── Attributes
+│   │   ├── accountNumber
+│   │   ├── name
+│   │   ├── phoneNumber
+│   │   ├── balance
+│   │   └── pin
+│   │
+│   ├── Constructors
+│   │   ├── Account(String accountNumber, String name, String phoneNumber, double balance, int pin)
+│   │   └── Account(String accountNumber, String name, String phoneNumber, int pin)
+│   │
+│   ├── Methods
+│   │   ├── toTableFormat(): String
+│   │   ├── fromTableFormat(String line): static Account
+│   │   ├── getAccountNumber(): String
+│   │   ├── getName(): String
+│   │   ├── getPhoneNumber(): String
+│   │   ├── getBalance(): double
+│   │   ├── getPIN(): int
+│   │   ├── deposit(double amount)
+│   │   ├── withdraw(double amount)
+│   │   └── setPIN(int pin)
+│
+├── BankDatabase Class
+│   │
+│   ├── Attributes
+│   │   ├── static final String FILENAME
+│   │   └── Map<String, Account> accounts
+│   │
+│   ├── Constructor
+│   │   └── BankDatabase()
+│   │
+│   ├── Methods
+│   │   ├── getAccount(String accountNumber): Account
+│   │   ├── createAccount(String name, String phoneNumber, int pin): String
+│   │   ├── generateAccountNumber(): String
+│   │   ├── saveAccountsToFile()
+│   │   ├── fetchAccountsFromFile()
+│   │   └── isValidAccountNumber(String accountNumber): boolean
+│
+├── ATM Class
+│   │
+│   ├── Attributes
+│   │   ├── Scanner scanner
+│   │   └── BankDatabase bankDatabase
+│   │
+│   ├── Constructor
+│   │   └── ATM()
+│   │
+│   ├── Methods
+│   │   ├── start()
+│   │   │   └── displayMainMenu()
+│   │   │       ├── createNewAccount()
+│   │   │       └── displayTransactionMenu(Account account)
+│   │   │           ├── performCashWithdrawal(Account account)
+│   │   │           ├── performDeposit(Account account)
+│   │   │           ├── performPINChange(Account account)
+│   │   │           └── performBalanceEnquiry(Account account)
+│   │   └── main(String[] args)

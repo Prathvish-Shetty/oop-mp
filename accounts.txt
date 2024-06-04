@@ -1,0 +1,3 @@
+Account Number  Name                 Phone Number    Balance    PIN 
+AC678           nt                   9876543210      0.00       1212
+AC149           pss                  1234567890      0.00       1234
